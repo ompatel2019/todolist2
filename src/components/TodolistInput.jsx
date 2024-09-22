@@ -13,7 +13,8 @@ const TodolistInput = ({addTodos}) => {
 
                 <div className='w-[75%] space-x-4'>
                     <input className='w-[75%] p-2 px-4 rounded-md border-2' type="text" value={todo} onChange={(e) => {setTodo(e.target.value)}} placeholder='Add a todo...' />
-                    <button onClick={() => addTodos(todo)} className='w-[20%] p-2 border-2 text-white font-black bg-green-400 rounded-md hover:bg-green-600 transition-all hover:px-4 hover:text-gray-200'>Add</button>
+                    <button onClick={() => {addTodos(todo); setTodo('')}}
+                        className='w-[20%] p-2 border-2 text-white font-black bg-green-400 rounded-md hover:bg-green-600 transition-all hover:px-4 hover:text-gray-200'>Add</button>
                 </div>  
 
             </header>
